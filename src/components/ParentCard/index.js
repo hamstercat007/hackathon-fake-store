@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "../Card";
 import "./ParentCard.css"
 
 // We want the app to be a grid so it can be responsive.
@@ -6,7 +6,7 @@ import "./ParentCard.css"
 
 //Change the grid of the card container which is ParentCard
 
-//Create a container around all of the cards, so this must be in the parent, and give it the display property of grid and set the rows, e.g. cards-container, so you can place it in columns and make it responsive - with media query of less than 768px etc.
+// Create a container around all of the cards, so this must be in the parent, and give it the display property of grid and set the rows, e.g. cards-container, so you can place it in columns and make it responsive - with media query of less than 768px etc.
 //give the card a className so you can style it later. 
 
 function ParentCard({ allData }) {

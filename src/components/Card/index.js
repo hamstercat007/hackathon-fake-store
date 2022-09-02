@@ -1,5 +1,5 @@
 import "./card.css"
-import Like from "./Like";
+import Like from "../Like/Like";
 
 
 // add favourite component
