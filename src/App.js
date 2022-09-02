@@ -1,12 +1,21 @@
 import "./App.css";
-import useEffect from "react";
+import {useEffect, useState} from "react";
+
 
 function App() {
-  useEffect(async () => {
-    const results = await fetch("https://fakestoreapi.com/products");
-  });
 
-  console.log(results);
+  const [ allData, setAllData] = useState([])
+
+  useEffect( () => {
+    async function fetchData(){
+    const response = await fetch("https://fakestoreapi.com/products");
+    const data = response.json()
+    setAllData(data)
+    }
+    fetchData();
+  }, []);
+
+  console.log(allData.promisResult);
 
   return (
     <div className="App">
