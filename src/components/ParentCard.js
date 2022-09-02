@@ -8,7 +8,7 @@ function ParentCard({allData}) {
        {allData.map(data =>
                 <Card key={data.id}
                       image={data.image}
-                      name={data.name}
+                      name={data.title}
                       description={data.description}
                       category={data.category} />)}
      </div>
