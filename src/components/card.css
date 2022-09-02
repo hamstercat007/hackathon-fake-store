@@ -1,0 +1,22 @@
+.card{
+    width: 80%;
+    align-items: center;
+    margin: auto;
+}
+
+.card-image{
+    max-height: 30vh;
+    max-width: 100%
+}
+
+.card-title{
+font-size: 90%;
+}
+
+.card-description{
+font-size: 90%;
+}
+
+.card-category{
+font-size: 90%;
+}

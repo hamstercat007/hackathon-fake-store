@@ -1,4 +1,19 @@
 .cards-container {
   display:grid;
-  grid-template-columns: repeat(3,1fr)
+  grid-template-columns: repeat(3,1fr);
+  max-width: 100%;
+  align-items: center;
+  gap: 5vw;
+  justify-content: center;
+
 }
+
+/* creating a media query that up to 768 pixels in width will put the grid as 2 columns instead of 3 */
+ 
+@media only screen and (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+

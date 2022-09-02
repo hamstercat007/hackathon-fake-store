@@ -1,11 +1,13 @@
+import "./card.css"
+
 
 function Card({image,name,description,category,key}) {
     return(
-     <div id={key}>
-        <img src={image} alt={name}/>
-        <h2>{name}</h2>
-        <p>{description}</p>
-        <p>{category}</p>
+     <div className="card" id={key}>
+        <img className="card-image" src={image} alt={name}/>
+        <h2 className="card-title">{name}</h2>
+        <p className="card-description">{description}</p>
+        <p className="card-category">{category}</p>
      </div>
     )
 }
