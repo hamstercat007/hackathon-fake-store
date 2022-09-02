@@ -15,7 +15,6 @@ function ParentCard({ allData }) {
     <div className="cards-container">
         {allData.map((data) => (
           <Card
-          
             key={data.id}
             image={data.image}
             name={data.title}
