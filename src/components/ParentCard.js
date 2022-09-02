@@ -1,48 +1,31 @@
-
 import Card from "./Card";
+import "./ParentCard.css"
 
-function ParentCard({allData}) {
-  console.log(allData[0])
-    return(
-     <div>
-       {allData.map(data =>
-                <Card key={data.id}
-                      image={data.image}
-                      name={data.title}
-                      description={data.description}
-                      category={data.category} />)}
-     </div>
-    )
+// We want the app to be a grid so it can be responsive.
+// put display: grid in app.css, puts the app as a grid.
+
+//Change the grid of the card container which is ParentCard
+
+//Create a container around all of the cards, so this must be in the parent, and give it the display property of grid and set the rows, e.g. cards-container, so you can place it in columns and make it responsive - with media query of less than 768px etc.
+//give the card a className so you can style it later. 
+
+function ParentCard({ allData }) {
+  console.log(allData[0]);
+  return (
+    <div className="cards-container">
+        {allData.map((data) => (
+          <Card
+            className="card"
+            key={data.id}
+            image={data.image}
+            name={data.title}
+            description={data.description}
+            category={data.category}
+          />
+        ))}
+   
+    </div>
+  );
 }
 
 export default ParentCard;
-
-// import LocationCard from "../Location Card/locationCard";
-// // css
-// import styles from "../../styles/CardDisplay.module.css";
-// export default function CardDisplay({ allLocationData, pending }) {
-//   return (
-//     <div className={styles.display_container}>
-//       {allLocationData.length === 0
-//         ? <div className={styles.noResultsContainer}>
-//         {!pending?
-//             <p className={styles.noResults}>
-//               Sorry, no results found.
-//               <br/><br/>
-//               Please try searching again with different filters (or adding a new place which has what you searched for!)
-//             </p>:
-//             <p className={styles.noResults}>
-//               Loading ...
-//             </p>}
-//           </div>
-//         : allLocationData.map((location) => <LocationCard key={location.location_id} location={location} />)
-//       }
-//     </div>
-//   );
-// }
-
-
-
-
-
-
