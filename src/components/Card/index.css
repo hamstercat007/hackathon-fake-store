@@ -1,3 +1,4 @@
+/*font-size is percentage of parent container*/
 .card{
     width: 80%;
     align-items: center;
@@ -20,3 +21,4 @@ font-size: 90%;
 .card-category{
 font-size: 90%;
 }
+

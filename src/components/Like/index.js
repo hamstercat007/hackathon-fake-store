@@ -1,4 +1,3 @@
-import "./like.css"
 import {useState} from "react"
 // add favourite component
 //state false = heart white, upon click state is true, and turns heart to red. 
