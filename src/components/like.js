@@ -1,17 +1,24 @@
 import "./like.css"
+import {useState} from "react"
 // add favourite component
-// return checkbox/button has function switch favourite (true), heart shape become red , if false heart shape become grey.
-// style checkbox/button to heart shape or other
-// set checkbox default as false
+//state false = heart white, upon click state is true, and turns heart to red. 
 
+
+// function Like() {
+//   const [like, setLike] = useState(false)
+//   const likeHeart = () => setLike((prevLike) => !prevLike)
+//     return(
+//      <div onClick={likeHeart}>
+//       Like: {like? "❤️": "❤"}  
+//      </div>
+//     )
+// }
 
 function Like() {
+  const [like, setLike] = useState(false)
     return(
-     <div>
-        <label className="like-it">
-        <input type="checkbox" />
-        ❤
-      </label>
+     <div onClick={() => setLike((prevLike) => !prevLike)}>
+      Like: {like? "❤️": "❤"}  
      </div>
     )
 }
