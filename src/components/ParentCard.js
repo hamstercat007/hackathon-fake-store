@@ -2,14 +2,15 @@
 import Card from "./Card";
 
 function ParentCard({allData}) {
+  console.log(allData[0])
     return(
      <div>
-       allData.map((data)=>
+       {allData.map(data =>
                 <Card key={data.id}
                       image={data.image}
                       name={data.name}
                       description={data.description}
-                      category={category} />)
+                      category={data.category} />)}
      </div>
     )
 }

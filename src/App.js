@@ -10,13 +10,11 @@ function App() {
   useEffect( () => {
     async function fetchData(){
     const response = await fetch("https://fakestoreapi.com/products");
-    const data = response.json()
+    const data = await response.json()
     setAllData(data)
     }
     fetchData();
   }, []);
-
-  console.log(allData);
 
 
 // Plan:
@@ -41,7 +39,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>product name: </p>
         <ParentCard allData={allData}/>
       </header>
     </div>
