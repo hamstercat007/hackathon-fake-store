@@ -1,6 +1,8 @@
 import "./App.css";
 import {useEffect, useState, React} from "react";
 import ParentCard from "./components/ParentCard";
+import ThemeSwitcher from "./components/ThemeSwitcher";
+import {useThemeContext} from './context/theme'
 
 //exported to be used in the rest of the aplication
 // https://www.freecodecamp.org/news/react-context-for-beginners/
@@ -10,6 +12,7 @@ import ParentCard from "./components/ParentCard";
 function App() {
 
   const [ data, setData] = useState([])
+  const {backgroundColor, color, } = useThemeContext()
 
   useEffect( () => {
     async function fetchData(){
@@ -22,8 +25,10 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor, color}}>
       <header className="App-header">
+      <h1>Lisa's Fake Store</h1>
+      <ThemeSwitcher />
         <ParentCard data={data}/>
       </header>
     </div>

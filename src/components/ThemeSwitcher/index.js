@@ -1,6 +1,6 @@
 //create a checkbox.
 //create the function to switch the theme
-import './index.css'
+import "./index.css";
 import { useThemeContext } from "../../context/theme";
 
 //when you trigger an event on a html element,
@@ -14,7 +14,7 @@ function ThemeSwitcher() {
   const { toggleTheme, darkTheme } = useThemeContext();
   return (
     <label className="switch">
-      <input type="checkbox" onClick={toggleTheme} checked={!darkTheme} />
+      <input type="checkbox" onClick={toggleTheme} checked={darkTheme} />
       <span className="slider round"></span>
     </label>
   );
