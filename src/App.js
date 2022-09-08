@@ -12,7 +12,7 @@ import {useThemeContext} from './context/theme'
 function App() {
 
   const [ data, setData] = useState([])
-  const {backgroundColor, color, } = useThemeContext()
+  const {backgroundColor, color } = useThemeContext()
 
   useEffect( () => {
     async function fetchData(){
